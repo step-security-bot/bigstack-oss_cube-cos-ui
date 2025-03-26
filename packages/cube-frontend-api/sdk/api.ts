@@ -656,6 +656,37 @@ export interface GetAbstractedEventsResponseDataLimit {
 /**
  * 
  * @export
+ * @interface GetCpuUsageHistoryOfHostResponse
+ */
+export interface GetCpuUsageHistoryOfHostResponse {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetCpuUsageHistoryOfHostResponse
+     */
+    'code': number;
+    /**
+     * 
+     * @type {TimeValuePair}
+     * @memberof GetCpuUsageHistoryOfHostResponse
+     */
+    'data': TimeValuePair;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetCpuUsageHistoryOfHostResponse
+     */
+    'msg': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetCpuUsageHistoryOfHostResponse
+     */
+    'status': string;
+}
+/**
+ * 
+ * @export
  * @interface GetCpuUsageRankOfHostsResponse
  */
 export interface GetCpuUsageRankOfHostsResponse {
@@ -1592,6 +1623,12 @@ export interface GetGrafanaDashboardLinkResponseData {
      * @memberof GetGrafanaDashboardLinkResponseData
      */
     'link': string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof GetGrafanaDashboardLinkResponseData
+     */
+    'enabled': boolean;
 }
 /**
  * 
@@ -1963,6 +2000,163 @@ export type GetHealthsResponseDataServicesInnerStatusCurrentEnum = typeof GetHea
 /**
  * 
  * @export
+ * @interface GetHostSupportFile500Response
+ */
+export interface GetHostSupportFile500Response {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetHostSupportFile500Response
+     */
+    'code'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFile500Response
+     */
+    'msg'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFile500Response
+     */
+    'status'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface GetHostSupportFilesResponse
+ */
+export interface GetHostSupportFilesResponse {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetHostSupportFilesResponse
+     */
+    'code': number;
+    /**
+     * 
+     * @type {Array<GetHostSupportFilesResponseDataInner>}
+     * @memberof GetHostSupportFilesResponse
+     */
+    'data': Array<GetHostSupportFilesResponseDataInner>;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFilesResponse
+     */
+    'msg': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFilesResponse
+     */
+    'status': string;
+}
+/**
+ * 
+ * @export
+ * @interface GetHostSupportFilesResponseDataInner
+ */
+export interface GetHostSupportFilesResponseDataInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFilesResponseDataInner
+     */
+    'name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFilesResponseDataInner
+     */
+    'group': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFilesResponseDataInner
+     */
+    'description': string;
+    /**
+     * 
+     * @type {GetHostSupportFilesResponseDataInnerSource}
+     * @memberof GetHostSupportFilesResponseDataInner
+     */
+    'source': GetHostSupportFilesResponseDataInnerSource;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetHostSupportFilesResponseDataInner
+     */
+    'sizeMiB': number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFilesResponseDataInner
+     */
+    'url': string;
+    /**
+     * 
+     * @type {GetHostSupportFilesResponseDataInnerStatus}
+     * @memberof GetHostSupportFilesResponseDataInner
+     */
+    'status': GetHostSupportFilesResponseDataInnerStatus;
+}
+/**
+ * 
+ * @export
+ * @interface GetHostSupportFilesResponseDataInnerSource
+ */
+export interface GetHostSupportFilesResponseDataInnerSource {
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFilesResponseDataInnerSource
+     */
+    'role': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFilesResponseDataInnerSource
+     */
+    'host': string;
+}
+/**
+ * 
+ * @export
+ * @interface GetHostSupportFilesResponseDataInnerStatus
+ */
+export interface GetHostSupportFilesResponseDataInnerStatus {
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFilesResponseDataInnerStatus
+     */
+    'current': GetHostSupportFilesResponseDataInnerStatusCurrentEnum;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof GetHostSupportFilesResponseDataInnerStatus
+     */
+    'isCreating': boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetHostSupportFilesResponseDataInnerStatus
+     */
+    'createdAt': string;
+}
+
+export const GetHostSupportFilesResponseDataInnerStatusCurrentEnum = {
+    Ok: 'ok',
+    Error: 'error'
+} as const;
+
+export type GetHostSupportFilesResponseDataInnerStatusCurrentEnum = typeof GetHostSupportFilesResponseDataInnerStatusCurrentEnum[keyof typeof GetHostSupportFilesResponseDataInnerStatusCurrentEnum];
+
+/**
+ * 
+ * @export
  * @interface GetIntegrations500Response
  */
 export interface GetIntegrations500Response {
@@ -2056,6 +2250,31 @@ export interface GetIntegrationsResponseDataInner {
 /**
  * 
  * @export
+ * @interface GetLicenses401Response
+ */
+export interface GetLicenses401Response {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetLicenses401Response
+     */
+    'code'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetLicenses401Response
+     */
+    'msg'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetLicenses401Response
+     */
+    'status'?: string;
+}
+/**
+ * 
+ * @export
  * @interface GetLicenses500Response
  */
 export interface GetLicenses500Response {
@@ -2142,10 +2361,10 @@ export interface GetLicensesResponseDataLicensesInner {
     'type': string;
     /**
      * 
-     * @type {string}
+     * @type {Array<string>}
      * @memberof GetLicensesResponseDataLicensesInner
      */
-    'hostname': string;
+    'hosts': Array<string>;
     /**
      * 
      * @type {string}
@@ -2182,6 +2401,12 @@ export interface GetLicensesResponseDataLicensesInner {
      * @memberof GetLicensesResponseDataLicensesInner
      */
     'expiry': GetLicensesResponseDataLicensesInnerExpiry;
+    /**
+     * 
+     * @type {GetLicensesResponseDataLicensesInnerStatus}
+     * @memberof GetLicensesResponseDataLicensesInner
+     */
+    'status': GetLicensesResponseDataLicensesInnerStatus;
 }
 /**
  * 
@@ -2247,10 +2472,10 @@ export interface GetLicensesResponseDataLicensesInnerProduct {
     'name': string;
     /**
      * 
-     * @type {object}
+     * @type {Array<string>}
      * @memberof GetLicensesResponseDataLicensesInnerProduct
      */
-    'features': object;
+    'features': Array<string>;
 }
 /**
  * 
@@ -2269,7 +2494,7 @@ export interface GetLicensesResponseDataLicensesInnerQuantity {
      * @type {number}
      * @memberof GetLicensesResponseDataLicensesInnerQuantity
      */
-    'vcpu': number;
+    'value': number;
 }
 /**
  * 
@@ -2302,6 +2527,33 @@ export interface GetLicensesResponseDataLicensesInnerServiceLevelAgreement {
      */
     'meanTimeToRecovery': string;
 }
+/**
+ * 
+ * @export
+ * @interface GetLicensesResponseDataLicensesInnerStatus
+ */
+export interface GetLicensesResponseDataLicensesInnerStatus {
+    /**
+     * 
+     * @type {string}
+     * @memberof GetLicensesResponseDataLicensesInnerStatus
+     */
+    'current': GetLicensesResponseDataLicensesInnerStatusCurrentEnum;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof GetLicensesResponseDataLicensesInnerStatus
+     */
+    'isExpiring': boolean;
+}
+
+export const GetLicensesResponseDataLicensesInnerStatusCurrentEnum = {
+    Ok: 'ok',
+    Expired: 'expired'
+} as const;
+
+export type GetLicensesResponseDataLicensesInnerStatusCurrentEnum = typeof GetLicensesResponseDataLicensesInnerStatusCurrentEnum[keyof typeof GetLicensesResponseDataLicensesInnerStatusCurrentEnum];
+
 /**
  * 
  * @export
@@ -2370,6 +2622,37 @@ export interface GetMeResponseData {
      * @memberof GetMeResponseData
      */
     'name': string;
+}
+/**
+ * 
+ * @export
+ * @interface GetMemoryUsageHistoryOfHostResponse
+ */
+export interface GetMemoryUsageHistoryOfHostResponse {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetMemoryUsageHistoryOfHostResponse
+     */
+    'code': number;
+    /**
+     * 
+     * @type {TimeValuePair}
+     * @memberof GetMemoryUsageHistoryOfHostResponse
+     */
+    'data': TimeValuePair;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetMemoryUsageHistoryOfHostResponse
+     */
+    'msg': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetMemoryUsageHistoryOfHostResponse
+     */
+    'status': string;
 }
 /**
  * 
@@ -2494,6 +2777,37 @@ export interface GetMemoryUsageSummaryOfVmsResponse {
      * @memberof GetMemoryUsageSummaryOfVmsResponse
      */
     'status': string;
+}
+/**
+ * @type GetMetricByHostOrVm200Response
+ * @export
+ */
+export type GetMetricByHostOrVm200Response = GetCpuUsageHistoryOfHostResponse | GetMemoryUsageHistoryOfHostResponse;
+
+/**
+ * 
+ * @export
+ * @interface GetMetricByHostOrVm500Response
+ */
+export interface GetMetricByHostOrVm500Response {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetMetricByHostOrVm500Response
+     */
+    'code'?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetMetricByHostOrVm500Response
+     */
+    'msg'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetMetricByHostOrVm500Response
+     */
+    'status'?: string;
 }
 /**
  * @type GetMetricByTypes200Response
@@ -3141,6 +3455,12 @@ export interface GetModuleHealthHistoryResponseData {
     'module': string;
     /**
      * 
+     * @type {boolean}
+     * @memberof GetModuleHealthHistoryResponseData
+     */
+    'isRepairable': boolean;
+    /**
+     * 
      * @type {Array<GetModuleHealthHistoryResponseDataHistoryInner>}
      * @memberof GetModuleHealthHistoryResponseData
      */
@@ -3603,6 +3923,12 @@ export interface GetServiceHealthHistoryResponseDataInner {
     'service': string;
     /**
      * 
+     * @type {boolean}
+     * @memberof GetServiceHealthHistoryResponseDataInner
+     */
+    'isRepairable': boolean;
+    /**
+     * 
      * @type {Array<GetServiceHealthHistoryResponseDataInnerHistoryInner>}
      * @memberof GetServiceHealthHistoryResponseDataInner
      */
@@ -4014,31 +4340,6 @@ export interface GetSupportFilesResponseData {
      * @memberof GetSupportFilesResponseData
      */
     'page': Page;
-}
-/**
- * 
- * @export
- * @interface GetToken401Response
- */
-export interface GetToken401Response {
-    /**
-     * 
-     * @type {number}
-     * @memberof GetToken401Response
-     */
-    'code'?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof GetToken401Response
-     */
-    'msg'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof GetToken401Response
-     */
-    'status'?: string;
 }
 /**
  * 
@@ -4584,10 +4885,10 @@ export interface ListTuningResponseDataTuningsInner {
     'value': string;
     /**
      * 
-     * @type {Array<string>}
+     * @type {Array<ListTuningResponseDataTuningsInnerHostsInner>}
      * @memberof ListTuningResponseDataTuningsInner
      */
-    'hosts': Array<string>;
+    'hosts': Array<ListTuningResponseDataTuningsInnerHostsInner>;
     /**
      * 
      * @type {string}
@@ -4622,15 +4923,40 @@ export interface ListTuningResponseDataTuningsInner {
 /**
  * 
  * @export
+ * @interface ListTuningResponseDataTuningsInnerHostsInner
+ */
+export interface ListTuningResponseDataTuningsInnerHostsInner {
+    /**
+     * 
+     * @type {string}
+     * @memberof ListTuningResponseDataTuningsInnerHostsInner
+     */
+    'name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListTuningResponseDataTuningsInnerHostsInner
+     */
+    'role': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListTuningResponseDataTuningsInnerHostsInner
+     */
+    'ip': string;
+}
+/**
+ * 
+ * @export
  * @interface ListTuningResponseDataTuningsInnerLimitation
  */
 export interface ListTuningResponseDataTuningsInnerLimitation {
     /**
      * 
-     * @type {string}
+     * @type {TuningLimitationType}
      * @memberof ListTuningResponseDataTuningsInnerLimitation
      */
-    'type': string;
+    'type': TuningLimitationType;
     /**
      * 
      * @type {ListTuningResponseDataTuningsInnerLimitationDefault}
@@ -4656,6 +4982,8 @@ export interface ListTuningResponseDataTuningsInnerLimitation {
      */
     'regex'?: string;
 }
+
+
 /**
  * @type ListTuningResponseDataTuningsInnerLimitationDefault
  * @export
@@ -4679,7 +5007,13 @@ export interface ListTuningResponseDataTuningsInnerStatus {
      * @type {string}
      * @memberof ListTuningResponseDataTuningsInnerStatus
      */
-    'updatedAt'?: string;
+    'current': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ListTuningResponseDataTuningsInnerStatus
+     */
+    'updatedAt': string;
     /**
      * 
      * @type {boolean}
@@ -4757,10 +5091,10 @@ export interface ListTuningSpecResponseDataInner {
 export interface ListTuningSpecResponseDataInnerLimitation {
     /**
      * 
-     * @type {string}
+     * @type {TuningLimitationType}
      * @memberof ListTuningSpecResponseDataInnerLimitation
      */
-    'type': string;
+    'type': TuningLimitationType;
     /**
      * 
      * @type {ListTuningResponseDataTuningsInnerLimitationDefault}
@@ -4786,6 +5120,8 @@ export interface ListTuningSpecResponseDataInnerLimitation {
      */
     'regex'?: string;
 }
+
+
 /**
  * 
  * @export
@@ -5121,10 +5457,10 @@ export interface NodeLicense {
     'serial': string;
     /**
      * 
-     * @type {GetLicensesResponseDataLicensesInnerProduct}
+     * @type {NodeLicenseProduct}
      * @memberof NodeLicense
      */
-    'product': GetLicensesResponseDataLicensesInnerProduct;
+    'product': NodeLicenseProduct;
     /**
      * 
      * @type {NodeLicenseIssue}
@@ -5133,10 +5469,10 @@ export interface NodeLicense {
     'issue': NodeLicenseIssue;
     /**
      * 
-     * @type {GetLicensesResponseDataLicensesInnerQuantity}
+     * @type {NodeLicenseQuantity}
      * @memberof NodeLicense
      */
-    'quantity': GetLicensesResponseDataLicensesInnerQuantity;
+    'quantity': NodeLicenseQuantity;
     /**
      * 
      * @type {NodeLicenseServiceLevelAgreement}
@@ -5199,6 +5535,44 @@ export interface NodeLicenseIssue {
      * @memberof NodeLicenseIssue
      */
     'date': string;
+}
+/**
+ * 
+ * @export
+ * @interface NodeLicenseProduct
+ */
+export interface NodeLicenseProduct {
+    /**
+     * 
+     * @type {string}
+     * @memberof NodeLicenseProduct
+     */
+    'name': string;
+    /**
+     * 
+     * @type {object}
+     * @memberof NodeLicenseProduct
+     */
+    'features': object;
+}
+/**
+ * 
+ * @export
+ * @interface NodeLicenseQuantity
+ */
+export interface NodeLicenseQuantity {
+    /**
+     * 
+     * @type {string}
+     * @memberof NodeLicenseQuantity
+     */
+    'type': string;
+    /**
+     * 
+     * @type {number}
+     * @memberof NodeLicenseQuantity
+     */
+    'vcpu': number;
 }
 /**
  * 
@@ -5861,10 +6235,10 @@ export interface SupportFile {
     'description': string;
     /**
      * 
-     * @type {SupportFileSource}
+     * @type {GetHostSupportFilesResponseDataInnerSource}
      * @memberof SupportFile
      */
-    'source': SupportFileSource;
+    'source': GetHostSupportFilesResponseDataInnerSource;
     /**
      * 
      * @type {string}
@@ -5943,21 +6317,21 @@ export interface SupportFileSetStatus {
 /**
  * 
  * @export
- * @interface SupportFileSource
+ * @interface TimeValuePair
  */
-export interface SupportFileSource {
+export interface TimeValuePair {
     /**
      * 
      * @type {string}
-     * @memberof SupportFileSource
+     * @memberof TimeValuePair
      */
-    'role': string;
+    'time': string;
     /**
      * 
-     * @type {string}
-     * @memberof SupportFileSource
+     * @type {number}
+     * @memberof TimeValuePair
      */
-    'host': string;
+    'value': number;
 }
 /**
  * 
@@ -6160,6 +6534,21 @@ export interface TrySlackChannelResponse {
      */
     'status': string;
 }
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export const TuningLimitationType = {
+    String: 'string',
+    Int: 'int',
+    Bool: 'bool'
+} as const;
+
+export type TuningLimitationType = typeof TuningLimitationType[keyof typeof TuningLimitationType];
+
+
 /**
  * 
  * @export
@@ -8040,8 +8429,8 @@ export const HealthApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {GetHealthHistoryServiceTypeEnum} serviceType The name of the service to retrieve health history. use GET /api/v1/datacenters/{dataCenter}/services to get the service list and their modules.
          * @param {GetHealthHistoryModuleTypeEnum} moduleType The name of the module to retrieve health history. use GET /api/v1/datacenters/{dataCenter}/services/{serviceType} to get the module list.
          * @param {GetHealthHistoryPastEnum} [past] The past time of the health history to query, click \&#39;try it out\&#39; to see a few options, but can specify with the \&#39;s\&#39;(second), \&#39;m\&#39;(minute), \&#39;h\&#39;(hour), and \&#39;d\&#39;(day) suffix for other time ranges.
-         * @param {string} [start] The start time of the health history to query, the value should be in RFC3339 format (default is 24 hours ago).
-         * @param {string} [stop] The end time of the health history to query, the value should be in RFC3339 format (default is now).
+         * @param {string} [start] The start time of the event to query, the value should be in RFC3339 format (default is 24 hours ago).
+         * @param {string} [stop] The end time of the event to query, the value should be in RFC3339 format (default is now).
          * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -8140,8 +8529,8 @@ export const HealthApiAxiosParamCreator = function (configuration?: Configuratio
          * @param {string} dataCenter The name of the data center to operate
          * @param {GetServiceHealthHistoryServiceTypeEnum} serviceType The name of the service to retrieve health history. use GET /api/v1/datacenters/{dataCenter}/services to get the service list and their modules.
          * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
-         * @param {string} [start] The start time of the health history to query, the value should be in RFC3339 format (default is 24 hours ago).
-         * @param {string} [stop] The end time of the health history to query, the value should be in RFC3339 format (default is now).
+         * @param {string} [start] The start time of the event to query, the value should be in RFC3339 format (default is 24 hours ago).
+         * @param {string} [stop] The end time of the event to query, the value should be in RFC3339 format (default is now).
          * @param {GetServiceHealthHistoryPastEnum} [past] The past time of the health history to query, click \&#39;try it out\&#39; to see a few options, but can specify with the \&#39;s\&#39;(second), \&#39;m\&#39;(minute), \&#39;h\&#39;(hour), and \&#39;d\&#39;(day) suffix for other time ranges.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -8285,8 +8674,8 @@ export const HealthApiFp = function(configuration?: Configuration) {
          * @param {GetHealthHistoryServiceTypeEnum} serviceType The name of the service to retrieve health history. use GET /api/v1/datacenters/{dataCenter}/services to get the service list and their modules.
          * @param {GetHealthHistoryModuleTypeEnum} moduleType The name of the module to retrieve health history. use GET /api/v1/datacenters/{dataCenter}/services/{serviceType} to get the module list.
          * @param {GetHealthHistoryPastEnum} [past] The past time of the health history to query, click \&#39;try it out\&#39; to see a few options, but can specify with the \&#39;s\&#39;(second), \&#39;m\&#39;(minute), \&#39;h\&#39;(hour), and \&#39;d\&#39;(day) suffix for other time ranges.
-         * @param {string} [start] The start time of the health history to query, the value should be in RFC3339 format (default is 24 hours ago).
-         * @param {string} [stop] The end time of the health history to query, the value should be in RFC3339 format (default is now).
+         * @param {string} [start] The start time of the event to query, the value should be in RFC3339 format (default is 24 hours ago).
+         * @param {string} [stop] The end time of the event to query, the value should be in RFC3339 format (default is now).
          * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -8317,8 +8706,8 @@ export const HealthApiFp = function(configuration?: Configuration) {
          * @param {string} dataCenter The name of the data center to operate
          * @param {GetServiceHealthHistoryServiceTypeEnum} serviceType The name of the service to retrieve health history. use GET /api/v1/datacenters/{dataCenter}/services to get the service list and their modules.
          * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
-         * @param {string} [start] The start time of the health history to query, the value should be in RFC3339 format (default is 24 hours ago).
-         * @param {string} [stop] The end time of the health history to query, the value should be in RFC3339 format (default is now).
+         * @param {string} [start] The start time of the event to query, the value should be in RFC3339 format (default is 24 hours ago).
+         * @param {string} [stop] The end time of the event to query, the value should be in RFC3339 format (default is now).
          * @param {GetServiceHealthHistoryPastEnum} [past] The past time of the health history to query, click \&#39;try it out\&#39; to see a few options, but can specify with the \&#39;s\&#39;(second), \&#39;m\&#39;(minute), \&#39;h\&#39;(hour), and \&#39;d\&#39;(day) suffix for other time ranges.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -8442,7 +8831,7 @@ export interface HealthApiGetHealthHistoryRequest {
 
     /**
      * The name of the module to retrieve health history. use GET /api/v1/datacenters/{dataCenter}/services/{serviceType} to get the module list.
-     * @type {'link' | 'clock' | 'dns' | 'bootstrap' | 'license' | 'etcd' | 'nodelist' | 'hacluster' | 'rabbitmq' | 'mysql' | 'mongodb' | 'vip' | 'haproxy_ha' | 'ceph' | 'ceph_mon' | 'ceph_osd' | 'ceph_rgw' | 'ceph_mds' | 'ceph_mgr' | 'rbd_target' | 'haproxy' | 'httpd' | 'skyline' | 'lim' | 'memcache' | 'k3s' | 'keycloak' | 'neutron' | 'nova' | 'cyborg' | 'ironic' | 'glance' | 'cinder' | 'manila' | 'swift' | 'heat' | 'octavia' | 'designate' | 'rancher' | 'masakari' | 'zookeeper' | 'kafka' | 'monasca' | 'telegraf' | 'grafana' | 'filebeat' | 'auditbeat' | 'logstash' | 'opensearch' | 'opensearch-dashboards' | 'influxdb' | 'kapacitor'}
+     * @type {'link' | 'clock' | 'dns' | 'bootstrap' | 'license' | 'etcd' | 'nodelist' | 'hacluster' | 'rabbitmq' | 'mysql' | 'mongodb' | 'vip' | 'haproxy_ha' | 'ceph' | 'ceph_mon' | 'ceph_osd' | 'ceph_rgw' | 'ceph_mds' | 'ceph_mgr' | 'rbd_target' | 'haproxy' | 'httpd' | 'skyline' | 'api' | 'memcache' | 'k3s' | 'keycloak' | 'neutron' | 'nova' | 'cyborg' | 'ironic' | 'glance' | 'cinder' | 'manila' | 'swift' | 'heat' | 'octavia' | 'designate' | 'rancher' | 'masakari' | 'zookeeper' | 'kafka' | 'monasca' | 'telegraf' | 'grafana' | 'filebeat' | 'auditbeat' | 'logstash' | 'opensearch' | 'opensearch-dashboards' | 'influxdb' | 'kapacitor'}
      * @memberof HealthApiGetHealthHistory
      */
     readonly moduleType: GetHealthHistoryModuleTypeEnum
@@ -8455,14 +8844,14 @@ export interface HealthApiGetHealthHistoryRequest {
     readonly past?: GetHealthHistoryPastEnum
 
     /**
-     * The start time of the health history to query, the value should be in RFC3339 format (default is 24 hours ago).
+     * The start time of the event to query, the value should be in RFC3339 format (default is 24 hours ago).
      * @type {string}
      * @memberof HealthApiGetHealthHistory
      */
     readonly start?: string
 
     /**
-     * The end time of the health history to query, the value should be in RFC3339 format (default is now).
+     * The end time of the event to query, the value should be in RFC3339 format (default is now).
      * @type {string}
      * @memberof HealthApiGetHealthHistory
      */
@@ -8525,14 +8914,14 @@ export interface HealthApiGetServiceHealthHistoryRequest {
     readonly watch?: boolean
 
     /**
-     * The start time of the health history to query, the value should be in RFC3339 format (default is 24 hours ago).
+     * The start time of the event to query, the value should be in RFC3339 format (default is 24 hours ago).
      * @type {string}
      * @memberof HealthApiGetServiceHealthHistory
      */
     readonly start?: string
 
     /**
-     * The end time of the health history to query, the value should be in RFC3339 format (default is now).
+     * The end time of the event to query, the value should be in RFC3339 format (default is now).
      * @type {string}
      * @memberof HealthApiGetServiceHealthHistory
      */
@@ -8582,7 +8971,7 @@ export interface HealthApiRepairModuleHealthRequest {
 
     /**
      * The name of the module to repair. use GET /api/v1/datacenters/{dataCenter}/services/{serviceType} to get the module list.
-     * @type {'link' | 'clock' | 'dns' | 'bootstrap' | 'license' | 'etcd' | 'nodelist' | 'hacluster' | 'rabbitmq' | 'mysql' | 'mongodb' | 'vip' | 'haproxy_ha' | 'ceph' | 'ceph_mon' | 'ceph_osd' | 'ceph_rgw' | 'ceph_mds' | 'ceph_mgr' | 'rbd_target' | 'haproxy' | 'httpd' | 'skyline' | 'lim' | 'memcache' | 'k3s' | 'keycloak' | 'neutron' | 'nova' | 'cyborg' | 'ironic' | 'glance' | 'cinder' | 'manila' | 'swift' | 'heat' | 'octavia' | 'designate' | 'rancher' | 'masakari' | 'zookeeper' | 'kafka' | 'monasca' | 'telegraf' | 'grafana' | 'filebeat' | 'auditbeat' | 'logstash' | 'opensearch' | 'opensearch-dashboards' | 'influxdb' | 'kapacitor'}
+     * @type {'link' | 'clock' | 'dns' | 'bootstrap' | 'license' | 'etcd' | 'nodelist' | 'hacluster' | 'rabbitmq' | 'mysql' | 'mongodb' | 'vip' | 'haproxy_ha' | 'ceph' | 'ceph_mon' | 'ceph_osd' | 'ceph_rgw' | 'ceph_mds' | 'ceph_mgr' | 'rbd_target' | 'haproxy' | 'httpd' | 'skyline' | 'api' | 'memcache' | 'k3s' | 'keycloak' | 'neutron' | 'nova' | 'cyborg' | 'ironic' | 'glance' | 'cinder' | 'manila' | 'swift' | 'heat' | 'octavia' | 'designate' | 'rancher' | 'masakari' | 'zookeeper' | 'kafka' | 'monasca' | 'telegraf' | 'grafana' | 'filebeat' | 'auditbeat' | 'logstash' | 'opensearch' | 'opensearch-dashboards' | 'influxdb' | 'kapacitor'}
      * @memberof HealthApiRepairModuleHealth
      */
     readonly moduleType: RepairModuleHealthModuleTypeEnum
@@ -8716,7 +9105,7 @@ export const GetHealthHistoryModuleTypeEnum = {
     Haproxy: 'haproxy',
     Httpd: 'httpd',
     Skyline: 'skyline',
-    Lim: 'lim',
+    Api: 'api',
     Memcache: 'memcache',
     K3s: 'k3s',
     Keycloak: 'keycloak',
@@ -8862,7 +9251,7 @@ export const RepairModuleHealthModuleTypeEnum = {
     Haproxy: 'haproxy',
     Httpd: 'httpd',
     Skyline: 'skyline',
-    Lim: 'lim',
+    Api: 'api',
     Memcache: 'memcache',
     K3s: 'k3s',
     Keycloak: 'keycloak',
@@ -9027,12 +9416,15 @@ export const LicensesApiAxiosParamCreator = function (configuration?: Configurat
          * 
          * @summary Retrieve the list of licenses
          * @param {string} dataCenter The name of the data center to operate
+         * @param {string} [keyword] The keyword to search, can be any string
+         * @param {GetLicensesTypeEnum} [type] The type of the license to query, click \&#39;try it out\&#39; to see a few options.
          * @param {number} [pageSize] The number of items per page (default is unlimit).
          * @param {number} [pageNum] The page number to retrieve
+         * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLicenses: async (dataCenter: string, pageSize?: number, pageNum?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        getLicenses: async (dataCenter: string, keyword?: string, type?: GetLicensesTypeEnum, pageSize?: number, pageNum?: number, watch?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'dataCenter' is not null or undefined
             assertParamExists('getLicenses', 'dataCenter', dataCenter)
             const localVarPath = `/api/v1/datacenters/{dataCenter}/licenses`
@@ -9048,12 +9440,24 @@ export const LicensesApiAxiosParamCreator = function (configuration?: Configurat
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            if (keyword !== undefined) {
+                localVarQueryParameter['keyword'] = keyword;
+            }
+
+            if (type !== undefined) {
+                localVarQueryParameter['type'] = type;
+            }
+
             if (pageSize !== undefined) {
                 localVarQueryParameter['pageSize'] = pageSize;
             }
 
             if (pageNum !== undefined) {
                 localVarQueryParameter['pageNum'] = pageNum;
+            }
+
+            if (watch !== undefined) {
+                localVarQueryParameter['watch'] = watch;
             }
 
 
@@ -9175,13 +9579,16 @@ export const LicensesApiFp = function(configuration?: Configuration) {
          * 
          * @summary Retrieve the list of licenses
          * @param {string} dataCenter The name of the data center to operate
+         * @param {string} [keyword] The keyword to search, can be any string
+         * @param {GetLicensesTypeEnum} [type] The type of the license to query, click \&#39;try it out\&#39; to see a few options.
          * @param {number} [pageSize] The number of items per page (default is unlimit).
          * @param {number} [pageNum] The page number to retrieve
+         * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async getLicenses(dataCenter: string, pageSize?: number, pageNum?: number, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetLicensesResponse>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.getLicenses(dataCenter, pageSize, pageNum, options);
+        async getLicenses(dataCenter: string, keyword?: string, type?: GetLicensesTypeEnum, pageSize?: number, pageNum?: number, watch?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetLicensesResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getLicenses(dataCenter, keyword, type, pageSize, pageNum, watch, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['LicensesApi.getLicenses']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
@@ -9233,7 +9640,7 @@ export const LicensesApiFactory = function (configuration?: Configuration, baseP
          * @throws {RequiredError}
          */
         getLicenses(requestParameters: LicensesApiGetLicensesRequest, options?: RawAxiosRequestConfig): AxiosPromise<GetLicensesResponse> {
-            return localVarFp.getLicenses(requestParameters.dataCenter, requestParameters.pageSize, requestParameters.pageNum, options).then((request) => request(axios, basePath));
+            return localVarFp.getLicenses(requestParameters.dataCenter, requestParameters.keyword, requestParameters.type, requestParameters.pageSize, requestParameters.pageNum, requestParameters.watch, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -9272,6 +9679,20 @@ export interface LicensesApiGetLicensesRequest {
     readonly dataCenter: string
 
     /**
+     * The keyword to search, can be any string
+     * @type {string}
+     * @memberof LicensesApiGetLicenses
+     */
+    readonly keyword?: string
+
+    /**
+     * The type of the license to query, click \&#39;try it out\&#39; to see a few options.
+     * @type {'trial' | 'perpetual' | 'community' | 'enterprise'}
+     * @memberof LicensesApiGetLicenses
+     */
+    readonly type?: GetLicensesTypeEnum
+
+    /**
      * The number of items per page (default is unlimit).
      * @type {number}
      * @memberof LicensesApiGetLicenses
@@ -9284,6 +9705,13 @@ export interface LicensesApiGetLicensesRequest {
      * @memberof LicensesApiGetLicenses
      */
     readonly pageNum?: number
+
+    /**
+     * The toggle to enable http chunked transfer for continuous server push.
+     * @type {boolean}
+     * @memberof LicensesApiGetLicenses
+     */
+    readonly watch?: boolean
 }
 
 /**
@@ -9351,7 +9779,7 @@ export class LicensesApi extends BaseAPI {
      * @memberof LicensesApi
      */
     public getLicenses(requestParameters: LicensesApiGetLicensesRequest, options?: RawAxiosRequestConfig) {
-        return LicensesApiFp(this.configuration).getLicenses(requestParameters.dataCenter, requestParameters.pageSize, requestParameters.pageNum, options).then((request) => request(this.axios, this.basePath));
+        return LicensesApiFp(this.configuration).getLicenses(requestParameters.dataCenter, requestParameters.keyword, requestParameters.type, requestParameters.pageSize, requestParameters.pageNum, requestParameters.watch, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -9379,6 +9807,16 @@ export class LicensesApi extends BaseAPI {
     }
 }
 
+/**
+ * @export
+ */
+export const GetLicensesTypeEnum = {
+    Trial: 'trial',
+    Perpetual: 'perpetual',
+    Community: 'community',
+    Enterprise: 'enterprise'
+} as const;
+export type GetLicensesTypeEnum = typeof GetLicensesTypeEnum[keyof typeof GetLicensesTypeEnum];
 
 
 /**
@@ -9488,6 +9926,76 @@ export class LogoutApi extends BaseAPI {
  */
 export const MetricsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * 
+         * @summary Retrieve the various metrics with different view from single host or single vm
+         * @param {string} dataCenter The name of the data center to operate
+         * @param {GetMetricByHostOrVmMetricTypeEnum} metricType The type of metric to query, the value can be \&#39;cpuUsage\&#39;, \&#39;memoryUsage\&#39;, \&#39;diskUsage\&#39;, \&#39;diskBandwidth\&#39;, \&#39;diskIops\&#39;, \&#39;diskLatency\&#39;, \&#39;diskReadIops\&#39;, \&#39;diskWriteIops\&#39;, \&#39;networkTrafficIn\&#39;, or \&#39;networkTrafficOut\&#39;.
+         * @param {GetMetricByHostOrVmViewTypeEnum} viewType The type of view to query, the value can be only \&#39;summary\&#39;, \&#39;history\&#39;, or \&#39;rank\&#39;.
+         * @param {GetMetricByHostOrVmEntityTypeEnum} entityType The type of entity to query, the value can be \&#39;hosts\&#39; or \&#39;vms\&#39;
+         * @param {string} entityIdOrName The id or name of the entity to query
+         * @param {GetMetricByHostOrVmPastEnum} [past] The past time of the health history to query, click \&#39;try it out\&#39; to see a few options, but can specify with the \&#39;s\&#39;(second), \&#39;m\&#39;(minute), \&#39;h\&#39;(hour), and \&#39;d\&#39;(day) suffix for other time ranges.
+         * @param {string} [start] The start time of the event to query, the value should be in RFC3339 format (default is 24 hours ago).
+         * @param {string} [stop] The end time of the event to query, the value should be in RFC3339 format (default is now).
+         * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMetricByHostOrVm: async (dataCenter: string, metricType: GetMetricByHostOrVmMetricTypeEnum, viewType: GetMetricByHostOrVmViewTypeEnum, entityType: GetMetricByHostOrVmEntityTypeEnum, entityIdOrName: string, past?: GetMetricByHostOrVmPastEnum, start?: string, stop?: string, watch?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'dataCenter' is not null or undefined
+            assertParamExists('getMetricByHostOrVm', 'dataCenter', dataCenter)
+            // verify required parameter 'metricType' is not null or undefined
+            assertParamExists('getMetricByHostOrVm', 'metricType', metricType)
+            // verify required parameter 'viewType' is not null or undefined
+            assertParamExists('getMetricByHostOrVm', 'viewType', viewType)
+            // verify required parameter 'entityType' is not null or undefined
+            assertParamExists('getMetricByHostOrVm', 'entityType', entityType)
+            // verify required parameter 'entityIdOrName' is not null or undefined
+            assertParamExists('getMetricByHostOrVm', 'entityIdOrName', entityIdOrName)
+            const localVarPath = `/api/v1/datacenters/{dataCenter}/metrics/{metricType}/{viewType}/{entityType}/{entityId or Name}`
+                .replace(`{${"dataCenter"}}`, encodeURIComponent(String(dataCenter)))
+                .replace(`{${"metricType"}}`, encodeURIComponent(String(metricType)))
+                .replace(`{${"viewType"}}`, encodeURIComponent(String(viewType)))
+                .replace(`{${"entityType"}}`, encodeURIComponent(String(entityType)))
+                .replace(`{${"entityId or Name"}}`, encodeURIComponent(String(entityIdOrName)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (past !== undefined) {
+                localVarQueryParameter['past'] = past;
+            }
+
+            if (start !== undefined) {
+                localVarQueryParameter['start'] = start;
+            }
+
+            if (stop !== undefined) {
+                localVarQueryParameter['stop'] = stop;
+            }
+
+            if (watch !== undefined) {
+                localVarQueryParameter['watch'] = watch;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * 
          * @summary Retrieve the various metrics with different view from hosts or vms
@@ -9600,6 +10108,27 @@ export const MetricsApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
+         * @summary Retrieve the various metrics with different view from single host or single vm
+         * @param {string} dataCenter The name of the data center to operate
+         * @param {GetMetricByHostOrVmMetricTypeEnum} metricType The type of metric to query, the value can be \&#39;cpuUsage\&#39;, \&#39;memoryUsage\&#39;, \&#39;diskUsage\&#39;, \&#39;diskBandwidth\&#39;, \&#39;diskIops\&#39;, \&#39;diskLatency\&#39;, \&#39;diskReadIops\&#39;, \&#39;diskWriteIops\&#39;, \&#39;networkTrafficIn\&#39;, or \&#39;networkTrafficOut\&#39;.
+         * @param {GetMetricByHostOrVmViewTypeEnum} viewType The type of view to query, the value can be only \&#39;summary\&#39;, \&#39;history\&#39;, or \&#39;rank\&#39;.
+         * @param {GetMetricByHostOrVmEntityTypeEnum} entityType The type of entity to query, the value can be \&#39;hosts\&#39; or \&#39;vms\&#39;
+         * @param {string} entityIdOrName The id or name of the entity to query
+         * @param {GetMetricByHostOrVmPastEnum} [past] The past time of the health history to query, click \&#39;try it out\&#39; to see a few options, but can specify with the \&#39;s\&#39;(second), \&#39;m\&#39;(minute), \&#39;h\&#39;(hour), and \&#39;d\&#39;(day) suffix for other time ranges.
+         * @param {string} [start] The start time of the event to query, the value should be in RFC3339 format (default is 24 hours ago).
+         * @param {string} [stop] The end time of the event to query, the value should be in RFC3339 format (default is now).
+         * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getMetricByHostOrVm(dataCenter: string, metricType: GetMetricByHostOrVmMetricTypeEnum, viewType: GetMetricByHostOrVmViewTypeEnum, entityType: GetMetricByHostOrVmEntityTypeEnum, entityIdOrName: string, past?: GetMetricByHostOrVmPastEnum, start?: string, stop?: string, watch?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetMetricByHostOrVm200Response>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getMetricByHostOrVm(dataCenter, metricType, viewType, entityType, entityIdOrName, past, start, stop, watch, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['MetricsApi.getMetricByHostOrVm']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
          * @summary Retrieve the various metrics with different view from hosts or vms
          * @param {string} dataCenter The name of the data center to operate
          * @param {GetMetricByTypesMetricTypeEnum} metricType The type of metric to query, the value can be \&#39;cpuUsage\&#39;, \&#39;memoryUsage\&#39;, \&#39;diskUsage\&#39;, \&#39;diskBandwidth\&#39;, \&#39;diskIops\&#39;, \&#39;diskLatency\&#39;, \&#39;diskReadIops\&#39;, \&#39;diskWriteIops\&#39;, \&#39;networkTrafficIn\&#39;, or \&#39;networkTrafficOut\&#39;.
@@ -9643,6 +10172,16 @@ export const MetricsApiFactory = function (configuration?: Configuration, basePa
     return {
         /**
          * 
+         * @summary Retrieve the various metrics with different view from single host or single vm
+         * @param {MetricsApiGetMetricByHostOrVmRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getMetricByHostOrVm(requestParameters: MetricsApiGetMetricByHostOrVmRequest, options?: RawAxiosRequestConfig): AxiosPromise<GetMetricByHostOrVm200Response> {
+            return localVarFp.getMetricByHostOrVm(requestParameters.dataCenter, requestParameters.metricType, requestParameters.viewType, requestParameters.entityType, requestParameters.entityIdOrName, requestParameters.past, requestParameters.start, requestParameters.stop, requestParameters.watch, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @summary Retrieve the various metrics with different view from hosts or vms
          * @param {MetricsApiGetMetricByTypesRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
@@ -9663,6 +10202,76 @@ export const MetricsApiFactory = function (configuration?: Configuration, basePa
         },
     };
 };
+
+/**
+ * Request parameters for getMetricByHostOrVm operation in MetricsApi.
+ * @export
+ * @interface MetricsApiGetMetricByHostOrVmRequest
+ */
+export interface MetricsApiGetMetricByHostOrVmRequest {
+    /**
+     * The name of the data center to operate
+     * @type {string}
+     * @memberof MetricsApiGetMetricByHostOrVm
+     */
+    readonly dataCenter: string
+
+    /**
+     * The type of metric to query, the value can be \&#39;cpuUsage\&#39;, \&#39;memoryUsage\&#39;, \&#39;diskUsage\&#39;, \&#39;diskBandwidth\&#39;, \&#39;diskIops\&#39;, \&#39;diskLatency\&#39;, \&#39;diskReadIops\&#39;, \&#39;diskWriteIops\&#39;, \&#39;networkTrafficIn\&#39;, or \&#39;networkTrafficOut\&#39;.
+     * @type {'cpuUsage' | 'memoryUsage' | 'diskUsage' | 'diskBandwidth' | 'diskIops' | 'diskLatency' | 'diskReadIops' | 'diskWriteIops' | 'networkTrafficIn' | 'networkTrafficOut'}
+     * @memberof MetricsApiGetMetricByHostOrVm
+     */
+    readonly metricType: GetMetricByHostOrVmMetricTypeEnum
+
+    /**
+     * The type of view to query, the value can be only \&#39;summary\&#39;, \&#39;history\&#39;, or \&#39;rank\&#39;.
+     * @type {'summary' | 'history' | 'rank'}
+     * @memberof MetricsApiGetMetricByHostOrVm
+     */
+    readonly viewType: GetMetricByHostOrVmViewTypeEnum
+
+    /**
+     * The type of entity to query, the value can be \&#39;hosts\&#39; or \&#39;vms\&#39;
+     * @type {'hosts' | 'vms'}
+     * @memberof MetricsApiGetMetricByHostOrVm
+     */
+    readonly entityType: GetMetricByHostOrVmEntityTypeEnum
+
+    /**
+     * The id or name of the entity to query
+     * @type {string}
+     * @memberof MetricsApiGetMetricByHostOrVm
+     */
+    readonly entityIdOrName: string
+
+    /**
+     * The past time of the health history to query, click \&#39;try it out\&#39; to see a few options, but can specify with the \&#39;s\&#39;(second), \&#39;m\&#39;(minute), \&#39;h\&#39;(hour), and \&#39;d\&#39;(day) suffix for other time ranges.
+     * @type {'1h' | '24h' | '7d' | '14d'}
+     * @memberof MetricsApiGetMetricByHostOrVm
+     */
+    readonly past?: GetMetricByHostOrVmPastEnum
+
+    /**
+     * The start time of the event to query, the value should be in RFC3339 format (default is 24 hours ago).
+     * @type {string}
+     * @memberof MetricsApiGetMetricByHostOrVm
+     */
+    readonly start?: string
+
+    /**
+     * The end time of the event to query, the value should be in RFC3339 format (default is now).
+     * @type {string}
+     * @memberof MetricsApiGetMetricByHostOrVm
+     */
+    readonly stop?: string
+
+    /**
+     * The toggle to enable http chunked transfer for continuous server push.
+     * @type {boolean}
+     * @memberof MetricsApiGetMetricByHostOrVm
+     */
+    readonly watch?: boolean
+}
 
 /**
  * Request parameters for getMetricByTypes operation in MetricsApi.
@@ -9750,6 +10359,18 @@ export interface MetricsApiGetMetricsOverviewRequest {
 export class MetricsApi extends BaseAPI {
     /**
      * 
+     * @summary Retrieve the various metrics with different view from single host or single vm
+     * @param {MetricsApiGetMetricByHostOrVmRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MetricsApi
+     */
+    public getMetricByHostOrVm(requestParameters: MetricsApiGetMetricByHostOrVmRequest, options?: RawAxiosRequestConfig) {
+        return MetricsApiFp(this.configuration).getMetricByHostOrVm(requestParameters.dataCenter, requestParameters.metricType, requestParameters.viewType, requestParameters.entityType, requestParameters.entityIdOrName, requestParameters.past, requestParameters.start, requestParameters.stop, requestParameters.watch, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @summary Retrieve the various metrics with different view from hosts or vms
      * @param {MetricsApiGetMetricByTypesRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
@@ -9773,6 +10394,49 @@ export class MetricsApi extends BaseAPI {
     }
 }
 
+/**
+ * @export
+ */
+export const GetMetricByHostOrVmMetricTypeEnum = {
+    CpuUsage: 'cpuUsage',
+    MemoryUsage: 'memoryUsage',
+    DiskUsage: 'diskUsage',
+    DiskBandwidth: 'diskBandwidth',
+    DiskIops: 'diskIops',
+    DiskLatency: 'diskLatency',
+    DiskReadIops: 'diskReadIops',
+    DiskWriteIops: 'diskWriteIops',
+    NetworkTrafficIn: 'networkTrafficIn',
+    NetworkTrafficOut: 'networkTrafficOut'
+} as const;
+export type GetMetricByHostOrVmMetricTypeEnum = typeof GetMetricByHostOrVmMetricTypeEnum[keyof typeof GetMetricByHostOrVmMetricTypeEnum];
+/**
+ * @export
+ */
+export const GetMetricByHostOrVmViewTypeEnum = {
+    Summary: 'summary',
+    History: 'history',
+    Rank: 'rank'
+} as const;
+export type GetMetricByHostOrVmViewTypeEnum = typeof GetMetricByHostOrVmViewTypeEnum[keyof typeof GetMetricByHostOrVmViewTypeEnum];
+/**
+ * @export
+ */
+export const GetMetricByHostOrVmEntityTypeEnum = {
+    Hosts: 'hosts',
+    Vms: 'vms'
+} as const;
+export type GetMetricByHostOrVmEntityTypeEnum = typeof GetMetricByHostOrVmEntityTypeEnum[keyof typeof GetMetricByHostOrVmEntityTypeEnum];
+/**
+ * @export
+ */
+export const GetMetricByHostOrVmPastEnum = {
+    _1h: '1h',
+    _24h: '24h',
+    _7d: '7d',
+    _14d: '14d'
+} as const;
+export type GetMetricByHostOrVmPastEnum = typeof GetMetricByHostOrVmPastEnum[keyof typeof GetMetricByHostOrVmPastEnum];
 /**
  * @export
  */
@@ -11917,6 +12581,44 @@ export const SupportFilesApiAxiosParamCreator = function (configuration?: Config
         },
         /**
          * 
+         * @summary Retrieve host support files
+         * @param {string} dataCenter The name of the data center to operate
+         * @param {string} hostname The hostname of the host to operate
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getHostSupportFile: async (dataCenter: string, hostname: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'dataCenter' is not null or undefined
+            assertParamExists('getHostSupportFile', 'dataCenter', dataCenter)
+            // verify required parameter 'hostname' is not null or undefined
+            assertParamExists('getHostSupportFile', 'hostname', hostname)
+            const localVarPath = `/api/v1/datacenters/{dataCenter}/supportFiles/hosts/{hostname}`
+                .replace(`{${"dataCenter"}}`, encodeURIComponent(String(dataCenter)))
+                .replace(`{${"hostname"}}`, encodeURIComponent(String(hostname)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary Retrieve all support files
          * @param {string} dataCenter The name of the data center to operate
          * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
@@ -11995,6 +12697,20 @@ export const SupportFilesApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
+         * @summary Retrieve host support files
+         * @param {string} dataCenter The name of the data center to operate
+         * @param {string} hostname The hostname of the host to operate
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getHostSupportFile(dataCenter: string, hostname: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GetHostSupportFilesResponse>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getHostSupportFile(dataCenter, hostname, options);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['SupportFilesApi.getHostSupportFile']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
+        },
+        /**
+         * 
          * @summary Retrieve all support files
          * @param {string} dataCenter The name of the data center to operate
          * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
@@ -12032,6 +12748,16 @@ export const SupportFilesApiFactory = function (configuration?: Configuration, b
         },
         /**
          * 
+         * @summary Retrieve host support files
+         * @param {SupportFilesApiGetHostSupportFileRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getHostSupportFile(requestParameters: SupportFilesApiGetHostSupportFileRequest, options?: RawAxiosRequestConfig): AxiosPromise<GetHostSupportFilesResponse> {
+            return localVarFp.getHostSupportFile(requestParameters.dataCenter, requestParameters.hostname, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @summary Retrieve all support files
          * @param {SupportFilesApiGetSupportFilesRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
@@ -12062,6 +12788,27 @@ export interface SupportFilesApiCreateSupportFilesRequest {
      * @memberof SupportFilesApiCreateSupportFiles
      */
     readonly createSupportFilesRequest: CreateSupportFilesRequest
+}
+
+/**
+ * Request parameters for getHostSupportFile operation in SupportFilesApi.
+ * @export
+ * @interface SupportFilesApiGetHostSupportFileRequest
+ */
+export interface SupportFilesApiGetHostSupportFileRequest {
+    /**
+     * The name of the data center to operate
+     * @type {string}
+     * @memberof SupportFilesApiGetHostSupportFile
+     */
+    readonly dataCenter: string
+
+    /**
+     * The hostname of the host to operate
+     * @type {string}
+     * @memberof SupportFilesApiGetHostSupportFile
+     */
+    readonly hostname: string
 }
 
 /**
@@ -12123,6 +12870,18 @@ export class SupportFilesApi extends BaseAPI {
      */
     public createSupportFiles(requestParameters: SupportFilesApiCreateSupportFilesRequest, options?: RawAxiosRequestConfig) {
         return SupportFilesApiFp(this.configuration).createSupportFiles(requestParameters.dataCenter, requestParameters.createSupportFilesRequest, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Retrieve host support files
+     * @param {SupportFilesApiGetHostSupportFileRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SupportFilesApi
+     */
+    public getHostSupportFile(requestParameters: SupportFilesApiGetHostSupportFileRequest, options?: RawAxiosRequestConfig) {
+        return SupportFilesApiFp(this.configuration).getHostSupportFile(requestParameters.dataCenter, requestParameters.hostname, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -12690,8 +13449,8 @@ export const TuningsApiAxiosParamCreator = function (configuration?: Configurati
          * 
          * @summary Retrieve the list of tunings from a host or data center
          * @param {string} dataCenter The name of the data center to operate
-         * @param {string} [host] The name of the host to retrieve the tunings, can specify multiple hosts to retrieve the tunings, for example: host&#x3D;example-node-0&amp;host&#x3D;example-node-1
-         * @param {string} [keyword] The keyword to search the tunings
+         * @param {Array<string>} [host] The name of the host to retrieve the tunings, can specify multiple hosts to retrieve the tunings, for example: host&#x3D;example-node-0&amp;host&#x3D;example-node-1
+         * @param {string} [keyword] The keyword to search, can be any string
          * @param {number} [pageSize] The number of items per page (default is unlimit).
          * @param {number} [pageNum] The page number to retrieve
          * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
@@ -12699,7 +13458,7 @@ export const TuningsApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listTunings: async (dataCenter: string, host?: string, keyword?: string, pageSize?: number, pageNum?: number, watch?: boolean, modified?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+        listTunings: async (dataCenter: string, host?: Array<string>, keyword?: string, pageSize?: number, pageNum?: number, watch?: boolean, modified?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             // verify required parameter 'dataCenter' is not null or undefined
             assertParamExists('listTunings', 'dataCenter', dataCenter)
             const localVarPath = `/api/v1/datacenters/{dataCenter}/tunings/parameters`
@@ -12715,7 +13474,7 @@ export const TuningsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            if (host !== undefined) {
+            if (host) {
                 localVarQueryParameter['host'] = host;
             }
 
@@ -12880,8 +13639,8 @@ export const TuningsApiFp = function(configuration?: Configuration) {
          * 
          * @summary Retrieve the list of tunings from a host or data center
          * @param {string} dataCenter The name of the data center to operate
-         * @param {string} [host] The name of the host to retrieve the tunings, can specify multiple hosts to retrieve the tunings, for example: host&#x3D;example-node-0&amp;host&#x3D;example-node-1
-         * @param {string} [keyword] The keyword to search the tunings
+         * @param {Array<string>} [host] The name of the host to retrieve the tunings, can specify multiple hosts to retrieve the tunings, for example: host&#x3D;example-node-0&amp;host&#x3D;example-node-1
+         * @param {string} [keyword] The keyword to search, can be any string
          * @param {number} [pageSize] The number of items per page (default is unlimit).
          * @param {number} [pageNum] The page number to retrieve
          * @param {boolean} [watch] The toggle to enable http chunked transfer for continuous server push.
@@ -12889,7 +13648,7 @@ export const TuningsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async listTunings(dataCenter: string, host?: string, keyword?: string, pageSize?: number, pageNum?: number, watch?: boolean, modified?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListTuningResponse>> {
+        async listTunings(dataCenter: string, host?: Array<string>, keyword?: string, pageSize?: number, pageNum?: number, watch?: boolean, modified?: boolean, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListTuningResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listTunings(dataCenter, host, keyword, pageSize, pageNum, watch, modified, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['TuningsApi.listTunings']?.[localVarOperationServerIndex]?.url;
@@ -13045,13 +13804,13 @@ export interface TuningsApiListTuningsRequest {
 
     /**
      * The name of the host to retrieve the tunings, can specify multiple hosts to retrieve the tunings, for example: host&#x3D;example-node-0&amp;host&#x3D;example-node-1
-     * @type {string}
+     * @type {Array<string>}
      * @memberof TuningsApiListTunings
      */
-    readonly host?: string
+    readonly host?: Array<string>
 
     /**
-     * The keyword to search the tunings
+     * The keyword to search, can be any string
      * @type {string}
      * @memberof TuningsApiListTunings
      */
