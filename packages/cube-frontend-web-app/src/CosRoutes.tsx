@@ -9,6 +9,7 @@ import { SettingsPage } from './pages/settings/SettingsPage'
 import { IntegrationsPage } from './pages/integrations/IntegrationsPage'
 import { EventsLayout } from './pages/events/EventsLayout'
 import { TuningsPage } from './pages/events/tunings/TuningsPage'
+import { CreateTuningsPage } from './pages/events/tunings/create/CreateTuningsPage'
 
 export const CosRoutes = () => {
   return (
@@ -28,6 +29,9 @@ export const CosRoutes = () => {
       <Route path="/events" element={<EventsLayout />}>
         <Route path="/events/tunings" element={<TuningsPage />} />
       </Route>
+      {/* The Create tunings route is placed outside of EventsLayout because
+        the shared tabs should not be displayed on the Create tunings page. */}
+      <Route path="/events/tunings/create" element={<CreateTuningsPage />} />
       <Route path="/settings" element={<SettingsPage />} />
       <Route path="/integrations" element={<IntegrationsPage />} />
       <Route path="*" element={<div>TODO: Not Found Page</div>} />
