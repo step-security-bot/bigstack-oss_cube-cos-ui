@@ -15,6 +15,7 @@ updates:
       - /packages/cube-frontend-ui-theme
       - /packages/cube-frontend-utils
       - /packages/cube-frontend-web-app
+      - /packages/cube-frontend-i18n
     schedule:
       interval: weekly
       day: monday
